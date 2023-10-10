@@ -22,9 +22,9 @@ submit.addEventListener("click",
         }
         // ticket calcules
         if (age === "minor") {
-            price -= (price * discountMinor).toFixed(2)
+            price -= (price * discountMinor)
         } else if (age === "senior") {
-            price -= (price * discountSenior).toFixed(2)
+            price -= (price * discountSenior)
         } else {
             price.toFixed(2)
         }
@@ -50,7 +50,7 @@ submit.addEventListener("click",
         // final price
         document.getElementById("final-price").innerHTML =
             `
-        &euro; ${price}
+        &euro; ${price.toFixed(2)}
         `;
     }
 )

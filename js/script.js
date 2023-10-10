@@ -11,6 +11,10 @@ function(){
     let age = document.querySelector(".form-select").value;
     let lastName = document.getElementById("last-name").value;
     let price = km * priceKm;
+    // check
+    if(km === "" || age === "" || lastName === "" || isNaN(km)){
+        alert("Inserisci valori corretti!")
+    }
     // ticket calcules
     if(age === "minor"){
         console.log(price -= (price * discountMinor).toFixed(2))

@@ -4,6 +4,9 @@ let reset = document.getElementById("reset")
 const priceKm = 0.21;
 const discountMinor = 0.2;
 const discountSenior = 0.4;
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
 
 // ticket values
 submit.addEventListener("click",
@@ -40,8 +43,15 @@ submit.addEventListener("click",
         } else {
             type.innerHTML = "Standard Price"
         }
-         
-
+        // randomizer1
+        document.querySelector(".rndm1").innerHTML = getRndInteger(1,47);
+        // randomizer1
+        document.querySelector(".rndm2").innerHTML = getRndInteger(1,9999);
+        // final price
+        document.getElementById("final-price").innerHTML = 
+        `
+        &euro; ${price}
+        `; 
     }
 )
 

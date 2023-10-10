@@ -17,59 +17,68 @@
 
 <body>
 
-    <div class="container">
-        <!-- title -->
-        <h1 class="text-uppercase">calcola il prezzo del tuo biglietto</h1>
-        <!-- form -->
-        <form class="bg-info p-3 mb-3">
-            <div class="mb-3">
-                <label for="last-name" class="form-label">Cognome</label>
-                <input type="text" class="form-control" id="last-name" name="last-name" value="">
-            </div>
-            <div class="mb-3">
-                <label for="km" class="form-label">Km da percorrere</label>
-                <input type="text" class="form-control" id="km" name="km" value="">
-            </div>
-            <select class="form-select mb-3">
-                <option value="">Select your gender</option>
-                <option value="minor">Minor</option>
-                <option value="adult">Adult</option>
-                <option value="senior">Senior</option>
-            </select>
-            <button id="submit" type="button" class="btn btn-primary">Generate</button>
-            <button id="reset" type="reset" class="btn btn-primary">Reset</button>
-        </form>
-
-
-        <div id="ticket" class="bg-danger p-3 d-none">
-            <h2 class="text-uppercase text-center">il tuo biglietto</h2>
-            <div class="container-fluid">
-                <h3 class="text-uppercase fs-4">dettagli passeggero</h3>
-                <div class="row">
-                    <div class="col-xl-4 bg-secondary">
-                        <h4 class="text-uppercase fs-5">nome passeggero</h4>
-                        <div id="name">...</div>
+    <section class="d-flex justify-content-center">
+        <div class="container py-5">
+            <!-- title -->
+            <h1 class="text-uppercase text-center mb-4">calcola il prezzo del tuo biglietto</h1>
+            <!-- form -->
+            <form class="bg-info rounded-4 p-3 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-4 mb-3">
+                        <label for="last-name" class="form-label">
+                            Last Name
+                        </label>
+                        <input type="text" class="form-control" id="last-name" name="last-name" value="">
                     </div>
-                    <div class="col-xl-2">
-                        <h5>Offerta</h5>
-                        <div id="ticket-type">...</div>
+                    <div class="col-12 col-lg-4 mb-3">
+                        <label for="km" class="form-label">How Many Km?</label>
+                        <input type="text" class="form-control" id="km" name="km" value="">
                     </div>
-                    <div class="col-xl-2">
-                        <h5>Carrozza</h5>
-                        <div class="rndm1">...</div>
+                    <div class="col-12 col-lg-4">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select mb-3">
+                            <option value="">Select your gender</option>
+                            <option value="minor">Minor</option>
+                            <option value="adult">Adult</option>
+                            <option value="senior">Senior</option>
+                        </select>
                     </div>
-                    <div class="col-xl-2">
-                        <h5>Codice CP</h5>
-                        <div class="rndm2">...</div>
-                    </div>
-                    <div class="col-xl-2">
-                        <h5>Prezzo Biglietto</h5>
-                        <div id="final-price"></div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="submit" type="button" class="btn btn-primary px-3 mx-3">Generate</button>
+                    <button id="reset" type="reset" class="btn btn-outline-dark px-3 mx-3">Reset</button>
+                </div>
+            </form>
+            <div id="ticket" class="bg-danger rounded-4 p-3 d-none">
+                <h2 class="text-uppercase text-center">il tuo biglietto</h2>
+                <div class="container-fluid">
+                    <h3 class="text-uppercase fs-4">dettagli passeggero</h3>
+                    <div class="row">
+                        <div class="col-xl-4 bg-secondary rounded-2 p-5 mb-3">
+                            <h4 class="text-uppercase fs-5">nome passeggero</h4>
+                            <strong id="name">...</strong>
+                        </div>
+                        <div class="col-xl-2 mb-3 py-3">
+                            <h5>Offerta</h5>
+                            <em id="ticket-type">...</em>
+                        </div>
+                        <div class="col-xl-2 mb-3 py-3">
+                            <h5>Carrozza</h5>
+                            <div class="rndm1">...</div>
+                        </div>
+                        <div class="col-xl-2 mb-3 py-3">
+                            <h5>Codice CP</h5>
+                            <div class="rndm2">...</div>
+                        </div>
+                        <div class="col-xl-2 mb-3 py-3">
+                            <h5>Prezzo Biglietto</h5>
+                            <strong id="final-price">...</strong>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- JS -->

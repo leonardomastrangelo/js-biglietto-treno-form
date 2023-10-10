@@ -1,16 +1,24 @@
 // variables
-let lastName = document.getElementById("last-name");
 let submit = document.getElementById("submit")
 const priceKm = 0.21;
 const discountMinor = 0.2;
 const discountSenior = 0.4;
-let price;
 
 submit.addEventListener("click", 
 function(){
-    let km = parseInt(document.getElementById("km")).value;
-    let gender = document.querySelector(".form-select").value;
-    console.log(km, gender)
+    // variables
+    let km = parseInt(document.getElementById("km").value);
+    let age = document.querySelector(".form-select").value;
+    let lastName = document.getElementById("last-name").value;
+    let price = km * priceKm;
+    // ticket calcules
+    if(age === "minor"){
+        console.log(price -= (price * discountMinor).toFixed(2))
+    } else if(age === "senior"){
+        console.log(price -= (price * discountSenior).toFixed(2))
+    } else{
+        console.log(price.toFixed(2))
+    }
 }
 )
 

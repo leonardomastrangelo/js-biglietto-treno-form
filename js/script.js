@@ -5,6 +5,7 @@ const priceKm = 0.21;
 const discountMinor = 0.2;
 const discountSenior = 0.4;
 
+// ticket values
 submit.addEventListener("click",
     function () {
         // variables
@@ -18,21 +19,32 @@ submit.addEventListener("click",
         }
         // ticket calcules
         if (age === "minor") {
-            console.log(price -= (price * discountMinor).toFixed(2))
+            price -= (price * discountMinor).toFixed(2)
         } else if (age === "senior") {
-            console.log(price -= (price * discountSenior).toFixed(2))
+            price -= (price * discountSenior).toFixed(2)
         } else {
-            console.log(price.toFixed(2))
+            price.toFixed(2)
         }
+
+         // TICKET PRINT
+         let ticket = document.getElementById("ticket")
+         ticket.classList.remove("d-none")
+         // name
+         document.getElementById("name").innerHTML = lastName;
+        //  offer
+        let type = document.getElementById("ticket-type")
+        if (age === "minor") {
+            type.innerHTML = "Teenager Discount"
+        } else if (age === "senior") {
+            type.innerHTML = "Senior Discount"
+        } else {
+            type.innerHTML = "Standard Price"
+        }
+         
+
     }
 )
-submit.addEventListener("click",
-    function () {
-        // ticket print
-        let ticket = document.getElementById("ticket")
-        ticket.classList.remove("d-none")
-    }
-)
+
 reset.addEventListener("click", 
     function () {
         // ticket dismiss

@@ -17,11 +17,11 @@
 
 <body>
 
-    <div class="container text-center">
+    <div class="container">
         <!-- title -->
         <h1 class="text-uppercase">calcola il prezzo del tuo biglietto</h1>
         <!-- form -->
-        <form class="mb-3">
+        <form class="bg-info p-3 mb-3">
             <div class="mb-3">
                 <label for="last-name" class="form-label">Cognome</label>
                 <input type="text" class="form-control" id="last-name" name="last-name" value="">
@@ -42,15 +42,30 @@
 
 
         <div id="ticket" class="bg-danger p-3 d-none">
-            <h2 class="text-uppercase">il tuo biglietto</h2>
+            <h2 class="text-uppercase text-center">il tuo biglietto</h2>
             <div class="container-fluid">
-                <h3>Lorem ipsum dolor sit.</h3>
+                <h3 class="text-uppercase fs-4">dettagli passeggero</h3>
                 <div class="row">
-                    <div class="col">1</div>
-                    <div class="col">2</div>
-                    <div class="col">3</div>
-                    <div class="col">4</div>
-                    <div class="col">5</div>
+                    <div class="col-xl-4 bg-secondary">
+                        <h4 class="text-uppercase fs-5">nome passeggero</h4>
+                        <div id="name">...</div>
+                    </div>
+                    <div class="col-xl-2">
+                        <h5>Offerta</h5>
+                        <div id="ticket-type">...</div>
+                    </div>
+                    <div class="col-xl-2">
+                        <h5>Carrozza</h5>
+                        <div class="rndm">...</div>
+                    </div>
+                    <div class="col-xl-2">
+                        <h5>Codice CP</h5>
+                        <div class="rndm">...</div>
+                    </div>
+                    <div class="col-xl-2">
+                        <h5>Prezzo Biglietto</h5>
+                        <div id="final-price">...</div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,21 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>calcolo del prezzo del biglietto del treno</title>
 </head>
-<body>
-    
 
+<body>
+
+    <div class="container text-center">
+        <!-- title -->
+        <h1 class="text-uppercase">calcola il prezzo del tuo biglietto</h1>
+        <!-- form -->
+        <form class="mb-3">
+            <div class="mb-3">
+                <label for="last-name" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="last-name" name="last-name" value="">
+            </div>
+            <div class="mb-3">
+                <label for="km" class="form-label">Km da percorrere</label>
+                <input type="text" class="form-control" id="km" name="km" value="">
+            </div>
+            <select class="form-select mb-3">
+                <option selected>Choose your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Generate</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+        </form>
+
+
+        <div class="bg-danger p-3 d-none">
+            <h2 class="text-uppercase">il tuo biglietto</h2>
+            <div class="container-fluid">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <div class="row">
+                    <div class="col">1</div>
+                    <div class="col">2</div>
+                    <div class="col">3</div>
+                    <div class="col">4</div>
+                    <div class="col">5</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- JS -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
